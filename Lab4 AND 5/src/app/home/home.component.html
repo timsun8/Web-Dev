@@ -1,0 +1,24 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<ul>
+    <li *ngFor="let product of products">
+        <a routerLink="/product/{{product.id}}">
+            <img src="{{product.imageUrl}}">
+            <div class="content">
+                <div class="name">
+                    {{product.name}}
+                    <span class="favorite {{product.favorite?'':'not'}}">
+                        ❤
+                    </span>
+                </div>
+                
+                <div class="price">
+                    <span>
+                        {{product.price|currency}}
+                    </span>
+                </div>
+                <app-share-buttons [link]="product.link"></app-share-buttons>
+            </div>
+        </a>
+    </li>
+</ul>

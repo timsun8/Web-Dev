@@ -1,0 +1,25 @@
+<div class="container">
+    <img [src]="product?.imageUrl" >
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{product?.name}}
+            </span>
+            <span class="favorite {{product?.favorite?'':'not'}}">
+                ❤
+            </span>
+        </div>
+        <!-- <div class="tags">
+            <app-tags [productPageTags]="product?.tags"></app-tags>
+        </div> -->
+        <div class="description">
+            <span>{{product?.description}}</span>
+        </div>
+        <div class="price">
+            <span>
+                {{product?.price|currency}}
+            </span>
+        </div>
+        <button>Add to cart</button>
+    </div>
+</div>
